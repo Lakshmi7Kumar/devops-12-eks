@@ -1,0 +1,15 @@
+replicaCount: 2
+
+image:
+  tag: "salesken-app"
+
+resources:
+  requests:
+    cpu: "200m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+env:
+  flaskEnv: "production"

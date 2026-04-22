@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: 374158719946.dkr.ecr.ap-south-1.amazonaws.com/salesken-app
+  tag: "v1.0.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5000
+
+nginx:
+  image: nginx:1.25
+  port: 80
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "250m"
+    memory: "256Mi"
+
+env:
+  flaskEnv: "production" 
