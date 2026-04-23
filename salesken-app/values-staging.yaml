@@ -13,3 +13,7 @@ resources:
 
 env:
   flaskEnv: "staging"
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 2
